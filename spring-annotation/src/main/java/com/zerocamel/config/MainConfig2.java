@@ -1,7 +1,11 @@
 package com.zerocamel.config;
 
+import com.zerocamel.bean.Color;
 import com.zerocamel.bean.Person;
+import com.zerocamel.bean.Red;
 import com.zerocamel.condition.LinuxCondition;
+import com.zerocamel.condition.MyImportBeanDefinitionRegistrar;
+import com.zerocamel.condition.MyImportSelector;
 import com.zerocamel.condition.WindowsCondition;
 import org.springframework.context.annotation.*;
 
@@ -19,12 +23,16 @@ import org.springframework.context.annotation.*;
  * 3、懒加载：
  *          单实例Bean:默认在容器启动的时候创建对象
  *          懒加载：容器启动不创建对象，第一次使用（获取）bean的时候
+ * 4、Import id默认是全类名
+ *    ImportSelector
+ *    ImportBeanDefinitionRegistrar
  *
  * @author: zeroCamel
  * @create: 2020-08-06 14:38
  **/
 @Conditional(WindowsCondition.class)
 @Configuration
+@Import({Color.class, Red.class, MyImportSelector.class, MyImportBeanDefinitionRegistrar.class})
 public class MainConfig2
 {
 //    @Scope("prototype")

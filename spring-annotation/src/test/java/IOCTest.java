@@ -1,3 +1,4 @@
+import com.zerocamel.bean.Blue;
 import com.zerocamel.bean.Person;
 import com.zerocamel.config.MainConfig;
 import com.zerocamel.config.MainConfig2;
@@ -18,16 +19,23 @@ import static java.lang.System.out;
  **/
 public class IOCTest {
 
-    @SuppressWarnings("resource")
-    @Test
-    public void test01()
+    ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig2.class);
+
+    private void printImport(ApplicationContext applicationContext)
     {
-        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
         String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
         for (String beanName:beanDefinitionNames)
         {
             out.println(beanName);
         }
+    }
+
+    @SuppressWarnings("resource")
+    @Test
+    public void test01()
+    {
+        ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
+        printImport(applicationContext);
     }
 
     /**
@@ -38,11 +46,7 @@ public class IOCTest {
     public void test02()
     {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig2.class);
-        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
-        for (String beanName:beanDefinitionNames)
-        {
-            out.println(beanName);
-        }
+        printImport(applicationContext);
 
         Object person = applicationContext.getBean(Person.class);
         Object person1 = applicationContext.getBean(Person.class);
@@ -67,16 +71,19 @@ public class IOCTest {
         String property = environment.getProperty("os.name");
         out.println(property);
 
-        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
-        for (String beanName:beanDefinitionNames)
-        {
-            out.println(beanName);
-        }
+        printImport(applicationContext);
 
         Map<String,Person> namesForType = applicationContext.getBeansOfType(Person.class);
         out.println(namesForType);
 
     }
 
+    @Test
+    public void testIml()
+    {
+        printImport(applicationContext);
+        Blue bean = applicationContext.getBean(Blue.class);
+        out.println(bean);
+    }
 
 }
