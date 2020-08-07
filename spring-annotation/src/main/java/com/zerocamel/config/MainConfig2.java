@@ -1,6 +1,7 @@
 package com.zerocamel.config;
 
 import com.zerocamel.bean.Color;
+import com.zerocamel.bean.ColorFactoryBean;
 import com.zerocamel.bean.Person;
 import com.zerocamel.bean.Red;
 import com.zerocamel.condition.LinuxCondition;
@@ -63,4 +64,12 @@ public class MainConfig2
         System.out.println("容器添加Bean...");
         return  new Person("linus",13);
     }
+
+    @Bean
+    public ColorFactoryBean colorFactoryBean()
+    {
+        return new ColorFactoryBean();
+    }
+
+
 }
