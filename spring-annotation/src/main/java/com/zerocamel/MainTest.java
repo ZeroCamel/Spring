@@ -2,6 +2,7 @@ package com.zerocamel;
 
 import com.zerocamel.bean.Person;
 import com.zerocamel.config.MainConfig;
+import com.zerocamel.config.MainConfigOfLifeCycle;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -31,5 +32,6 @@ public class MainTest {
         {
             System.out.println(name);
         }
+
     }
 }

@@ -8,7 +8,7 @@
     <context:component-scan base-package="com.zerocamel" use-default-filters="false"></context:component-scan>
 
     <!--实体定义 作用范围-->
-    <bean id="person" class="com.zerocamel.bean.Person" scope="prototype">
+    <bean id="person" class="com.zerocamel.bean.Person" scope="prototype" init-method="initial" destroy-method="destroy">
         <property name="name" value="zhangsan"></property>
         <property name="age" value="18"></property>
     </bean>
