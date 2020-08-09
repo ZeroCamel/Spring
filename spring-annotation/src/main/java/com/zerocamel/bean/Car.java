@@ -1,5 +1,7 @@
 package com.zerocamel.bean;
 
+import org.springframework.stereotype.Component;
+
 import static java.lang.System.out;
 
 /**
@@ -8,6 +10,7 @@ import static java.lang.System.out;
  * @author: zeroCamel
  * @create: 2020-08-07 09:28
  **/
+@Component
 public class Car {
 
     public Car() {

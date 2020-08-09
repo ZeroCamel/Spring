@@ -42,7 +42,7 @@ public class MainConfig2
     public Person person()
     {
         System.out.println("容器添加Bean...");
-        return  new Person("HH",13);
+        return new Person("HH",13);
     }
 
     /**

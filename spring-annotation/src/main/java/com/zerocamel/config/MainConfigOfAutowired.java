@@ -21,7 +21,8 @@ import org.springframework.context.annotation.Primary;
  * @author: zeroCamel
  * @create: 2020-08-07 15:57
  **/
-@ComponentScan(value = {"com.zerocamel.service","com.zerocamel.dao","com.zerocamel.controller"})
+@ComponentScan(value = {"com.zerocamel.service",
+        "com.zerocamel.bean","com.zerocamel.dao","com.zerocamel.controller"})
 @Configuration
 public class MainConfigOfAutowired {
 
