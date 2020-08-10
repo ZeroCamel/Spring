@@ -19,11 +19,11 @@ public class UserDao {
     private JdbcTemplate jdbcTemplate;
 
     public void insert(){
-
         String sql = "INSERT INTO `user` VALUES(?,?);";
         String substring = UUID.randomUUID().toString().substring(0, 5);
         jdbcTemplate.update(sql,substring,"test");
-    }
 
+        int i =10/0;
+    }
 
 }
