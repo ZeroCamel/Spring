@@ -41,7 +41,7 @@ import org.springframework.context.annotation.Configuration;
  *
  * 原理：
  *    ContextRefreshedEvent ContextClosedEvent
- *    1、容器创建对象 刷新对象 finishRefresh() publishEvent()
+ *    1、容器创建对象 刷新对象 finish publishEvent()
  *    2、事件发布流程
  *       1>获取事件的多播器（派发器）getApplicationEventMulticaster()
  *       2>multicastEvent-派发事件
@@ -49,7 +49,7 @@ import org.springframework.context.annotation.Configuration;
  *       4>invokeListener 执行Listener
  *       5>回调onApplicationEvent方法
  *    【事件派发器流程】
- *          1>容器创建对象 refresh()
+ *          1>容器创建对象
  *          2>initApplicationEventMulticaster
  *    【注册监听器】
  *          1>容器初始化 registerListeners()
