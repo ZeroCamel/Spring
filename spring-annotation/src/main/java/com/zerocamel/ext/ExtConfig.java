@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
  * @create: 2020-08-11 10:28
  *
  * BeanPostProcessor bean后置处理器 bean对象创建初始化前后进行拦截工作
- * BeanFactoryProcessor beanfactory的后置处理器 在BeanFactory标准初始化前后；所有的Bean定义已经保存加载到BeanFactory,但是bean的实例还未创建
+ * BeanFactoryProcessor beanfactory的后置处理器 在BeanFactory标准初始化之后；所有的Bean定义已经保存加载到BeanFactory,但是bean的实例还未创建之前
  *
  * 1、IOC容器创建对象
  * 2、this.invokeBeanFactoryPostProcessors(beanFactory);
