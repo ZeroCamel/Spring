@@ -11,6 +11,8 @@ import java.util.concurrent.Callable;
 /**
  * @program: spring-mvc-annotation
  * @description: 异步处理-控制器
+ * 1、Callable
+ * 2、DeferredResult
  * @author: zeroCamel
  * @create: 2020-08-13 14:38
  **/
