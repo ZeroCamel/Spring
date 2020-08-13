@@ -9,7 +9,8 @@ import org.springframework.web.servlet.config.annotation.*;
 
 /**
  * @program: spring-servlet
- * @description: ${只扫描Controller,禁止使用默认规则，否则不生效}
+ * @description: ${只扫描Controller,禁止使用默认规则，否则不生效,
+ * 一定要添加@EnableWebMvC注解}
  * @author: Mr.ZeroCamel
  * @create: 2020-08-12 17:09
  **/
