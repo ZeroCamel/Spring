@@ -7,7 +7,7 @@ import org.springframework.web.context.request.async.DeferredResult;
 
 /**
  * @program: spring-servlet
- * @description: ${消费实体}
+ * @description: ${任务实体}
  * @author: Mr.ZeroCamel
  * @create: 2020-08-13 23:18
  **/
